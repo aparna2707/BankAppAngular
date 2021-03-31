@@ -1,0 +1,59 @@
+<body>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    
+    <div class="container">
+        <div class="row">
+
+
+            <div class="main">
+
+                <div class="col text-center" style="color:rgb(10, 10, 10)">
+                    <h1><b>Login SBM Bank</b></h1>
+                </div><br>
+                <br>
+                <br>
+                <div class="md-12">
+                    <label for="exampleInputEmail1" class="form-label" style="color:darkblue"><strong>Account
+                            Number</strong></label>
+                    <input type="text" formControlName="accno" name="accno" class="form-control" id="username"
+                        aria-describedby="emailHelp">
+                        <div *ngIf="(this.loginForm.get('accno')?.touched||this.loginForm.get('accno')?.dirty)&&this.loginForm.get('accno')?.errors" class="errors">Invalid Account Number</div>
+                </div>
+                <br>
+                <br>
+                <div class="md-12">
+                    <label for="exampleInputPassword1" class="form-label"
+                        style="color:darkblue"><strong>Password</strong></label>
+                    <input type="password" formControlName="pswd" name="pswd" class="form-control" id="password">
+                    <div *ngIf="(this.loginForm.get('pswd')?.touched||this.loginForm.get('pswd')?.dirty)&&this.loginForm.get('pswd')?.errors" class="errors">Invalid password</div>
+                </div>
+                <br>
+                <br>
+                <div class=" d-grid gap-2 text-center">
+                    <button type="submit" class="btn  btn-success" >LOGIN</button>
+                    <br>
+                <br>
+                <br>
+                <br>
+                <P class="text-center" style="color: cornsilk;"><b>DON'T HAVE AN ACCOUNT ? REGISTER HERE </b></P>
+                    <a routerLink="register" style="color: rgb(204, 11, 130);">REGISTER HERE</a>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+</form>
+</body>

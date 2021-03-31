@@ -1,0 +1,11 @@
+.errors{
+    color: red;
+}
+body{
+     
+       
+     background-image: url("/assets/bank.jpg");
+    background-size: 100%100%;
+    background-repeat: no-repeat; 
+
+}

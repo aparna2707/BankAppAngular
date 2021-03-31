@@ -1,0 +1,65 @@
+<body>
+<form [formGroup]="registerForm" (ngSubmit)="register()" >
+   
+<div class="container">
+    <div class="row">
+
+
+        <div class="main">
+
+            <div class="col text-center" style="color:rgb(14, 13, 13)">
+                <h1 style="margin-top: 5%;"><b>NEW ACCOUNT</b> </h1>
+            </div><br>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                    style="color:rgb(12, 12, 12)"><strong>Username</strong></label>
+                <input type="text" formControlName="uname" name="uname" class="form-control" id="username" aria-describedby="emailHelp">
+                <div *ngIf="(this.registerForm.get('uname')?.touched||this.registerForm.get('uname')?.dirty)&&this.registerForm.get('uname')?.errors" 
+                class="errors">Invalid username</div>
+
+            </div>
+            <br>
+            <br>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                    style="color:rgb(12, 12, 14)"><strong>Account Number</strong></label>
+                <input type="text" formControlName="accno" name="accno" class="form-control" id="accno" aria-describedby="emailHelp">
+                <div *ngIf="(this.registerForm.get('accno')?.touched||this.registerForm.get('accno')?.dirty)&&this.registerForm.get('accno')?.errors"
+                class="errors">Invalid Account Number</div>
+            </div>
+            <br>
+            <br>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                    style="color:rgb(11, 11, 12)"><strong>Password</strong></label>
+                <input type="password"formControlName="pswd" name="pswd" class="form-control" id="password">
+                <div *ngIf="(this.registerForm.get('pswd')?.touched||this.registerForm.get('pswd')?.dirty)&&this.registerForm.get('pswd')?.errors" 
+                class="errors">Invalid password</div>
+            </div>
+            
+            
+        <br>
+        <br>
+            <div class=" d-grid gap-2 text-center">
+                <button type="submit" class="btn  btn-success" >Register</button>
+                <br>
+                <br>
+                <p class="text-center" style="color: rgb(6, 6, 7);"><b>ALREADY HAVE AN ACCOUNT? THEN LOGIN HERE !!!!</b></p>
+            <a routerLink=""style="color: rgb(6, 6, 7);" ><b>LOGIN</b></a>
+            </div>
+
+           
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+</form>
+</body>

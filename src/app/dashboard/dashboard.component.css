@@ -1,0 +1,7 @@
+.errors{
+    color: red;
+}
+body{
+    background-image: url("/assets/images.png");
+    background-size: cover;
+}
